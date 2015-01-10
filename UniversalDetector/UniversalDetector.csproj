@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82E6CB34-9F3C-408F-ABC5-53ABE91731BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UniversalDetector</RootNamespace>
+    <AssemblyName>UniversalDetector</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharsetDetector.cs" />
+    <Compile Include="Core\Big5Prober.cs" />
+    <Compile Include="Core\BitPackage.cs" />
+    <Compile Include="Core\CharDistributionAnalyser.cs" />
+    <Compile Include="Core\CharsetProber.cs" />
+    <Compile Include="Core\Charsets.cs" />
+    <Compile Include="Core\CodingStateMachine.cs" />
+    <Compile Include="Core\EscCharsetProber.cs" />
+    <Compile Include="Core\EscSM.cs" />
+    <Compile Include="Core\EUCJPProber.cs" />
+    <Compile Include="Core\EUCKRProber.cs" />
+    <Compile Include="Core\EUCTWProber.cs" />
+    <Compile Include="Core\GB18030Prober.cs" />
+    <Compile Include="Core\HebrewProber.cs" />
+    <Compile Include="Core\JapaneseContextAnalyser.cs" />
+    <Compile Include="Core\LangBulgarianModel.cs" />
+    <Compile Include="Core\LangCyrillicModel.cs" />
+    <Compile Include="Core\LangGreekModel.cs" />
+    <Compile Include="Core\LangHebrewModel.cs" />
+    <Compile Include="Core\LangHungarianModel.cs" />
+    <Compile Include="Core\LangThaiModel.cs" />
+    <Compile Include="Core\Latin1Prober.cs" />
+    <Compile Include="Core\MBCSGroupProber.cs" />
+    <Compile Include="Core\MBCSSM.cs" />
+    <Compile Include="Core\SBCharsetProber.cs" />
+    <Compile Include="Core\SBCSGroupProber.cs" />
+    <Compile Include="Core\SequenceModel.cs" />
+    <Compile Include="Core\SJISProber.cs" />
+    <Compile Include="Core\SMModel.cs" />
+    <Compile Include="Core\UniversalDetector.cs" />
+    <Compile Include="Core\UTF8Prober.cs" />
+    <Compile Include="DetectionConfidence.cs" />
+    <Compile Include="ICharsetDetector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
