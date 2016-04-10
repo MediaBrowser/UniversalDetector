@@ -291,8 +291,7 @@ namespace UniversalDetector.Core
 
         public override void DumpStatus()
         {
-            Console.WriteLine("  HEB: {0} - {1} [Logical-Visual score]", 
-               finalCharLogicalScore, finalCharVisualScore);
+            //Console.WriteLine("  HEB: {0} - {1} [Logical-Visual score]", finalCharLogicalScore, finalCharVisualScore);
         }
         
         public override float GetConfidence()
